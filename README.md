@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Byte Flow
+
+## About
+
+Welcome to [Project Name]! This platform is designed to provide a space for live coding sessions, problem-solving, and coding classes. Users can collaborate, learn, and improve their coding skills in an interactive and engaging environment.
+
+## Features
+
+- **Live Coding Sessions:** Collaborate with multiple users in real-time coding sessions.
+- **Problem-Solving:** Attempt coding problems and challenges to enhance your coding skills.
+- **Coding Classes:** Participate in coding classes to learn from experienced developers.
+- **Web-socket Integration:** Real-time communication through Web-sockets for seamless collaboration.
+- **User Profiles:** Create and customize your coding profile to showcase your skills and achievements.
 
 ## Getting Started
 
-First, run the development server:
+To run the project locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. **Clone the Repository:** `git clone [repository_url]`
+2. **Navigate to the Project Directory:** `cd [project_directory]`
+3. **Install Dependencies:** `npm install`
+4. **Start the Development Server:** `npm run dev`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Frontend: [Next.js](https://nextjs.org/), [React](https://reactjs.org/)
+- Backend: [Next.js](https://nextjs.org/), [Websockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+- Styling: [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [Tailwind CSS](https://tailwindcss.com/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contributing
 
-## Learn More
+We welcome contributions from the community! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For any questions or inquiries, feel free to reach out to us at [favourajokubi@gmail.com].
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the [MIT License](LICENSE).
