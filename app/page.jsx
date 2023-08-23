@@ -1,5 +1,9 @@
+import Editor from "./features/code editor/Editor";
+
 export default function HomePage() {
     return (
-        <div>page</div>
+        <div>
+            <Editor />
+        </div>
     );
 }
