@@ -1,9 +1,7 @@
-import Editor from "./features/code editor/Editor";
 
 export default function HomePage() {
     return (
-        <div>
-            <Editor />
+        <div className="h-screen dark:bg-dark-themeBackground bg-light-themeBackground">
         </div>
     );
 }
