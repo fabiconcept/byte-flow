@@ -1,0 +1,17 @@
+.mouse-follower {
+    height: 10vmax;
+    width: 10vmax;
+    border-radius: 50%;
+    animation: blob 10s linear infinite;
+    z-index: 1;
+    filter: blur(10px);
+}
+
+@keyframes blob {
+    25%{
+        border-radius: 50% 30% / 85% 60% 40% 33%;
+    }
+    75%{
+        border-radius: 30% 70% / 50% 66% 74% 73%;
+    }
+}
