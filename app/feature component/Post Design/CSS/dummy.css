@@ -1,0 +1,31 @@
+.dummy::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    background: linear-gradient(90deg, #eee, #f4f4f4, #eee);
+    animation: gradient 2s infinite ease-in-out;
+}
+
+.dummy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes gradient {
+    form {
+        left: 0%;
+    }
+
+    to {
+        left: 100%;
+    }
+}

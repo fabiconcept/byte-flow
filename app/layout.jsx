@@ -1,5 +1,10 @@
 import './styles/globals.css';
 import { Quicksand } from 'next/font/google';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import fontawesome from '@/fontawesome config/fontawesome'; // Your fontawesome.js file
+
+config.autoAddCss = false; // Prevents CSS from being automatically added
 
 const quicksand = Quicksand({ subsets: ['latin'] });
 
