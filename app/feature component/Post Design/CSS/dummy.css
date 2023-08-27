@@ -2,27 +2,37 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%;
     bottom: 0;
-    width: 100px;
+    width: 25px;
+    opacity: .5;
     background: linear-gradient(90deg, #eee, #f4f4f4, #eee);
+    filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transform: rotate(10deg) scale(1.25);
+    z-index: 10;
     animation: gradient 2s infinite ease-in-out;
 }
 
-.dummy::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 10;
-    width: 100%;
-    backdrop-filter: blur(10px);
+.dummy:nth-child(2)::after {
+    animation-delay: .2s;
+}
+
+.dummy:nth-child(3)::after {
+    animation-delay: .4s;
+}
+
+.dummy:nth-child(4)::after {
+    animation-delay: .1s;
+}
+
+.dummy:nth-child(5)::after {
+animation-delay: .3s;
 }
 
 @keyframes gradient {
     form {
-        left: 0%;
+        left: -100%;
     }
 
     to {

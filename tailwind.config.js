@@ -9,16 +9,18 @@ module.exports = {
     extend: {
       colors: {
         themeMain: "#5869EA",
-        light:{
+        light: {
           themeBackground: "#fff",
           textColor: ""
         },
-        dark:{
+        dark: {
           themeBackground: "#1F2029",
           textColor: "#fff"
         }
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
