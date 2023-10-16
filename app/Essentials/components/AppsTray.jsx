@@ -10,30 +10,37 @@ export default function AppsTray() {
             <section className="flex flex-col justify-center flex-1 gap-6 p-1 relative after:w-full after:h-10 after:bg-gradient-to-b after:top-0 after:left-0">
                 <div
                     className={` border-2  border-transparent ${activeApp === 0 ? "text-white scale-[1.35] bg-themeMain dark:shadow-white/50 shadow-black/70 border-white" : " hover:scale-105 dark:hover:shadow-white/50 hover:shadow-black/50 dark:bg-light-themeBackground/60 hover:bg-themeMain/50 dark:text-black text-white bg-dark-themeBackground/60"} min-w-full w-fit p-2 aspect-square grid place-items-center rounded-2xl  cursor-pointer hover:shadow-lg active:scale-95 active:shadow-inner`}
+                    title={"Feeds Page"}
                     onClick={()=>setActiveApp(0)}
                 >
                     <FiHome className={`${activeApp === 0 ? "text-white" : "dark:text-dark-themeBackground"} sm:text-xl text-sm group-hover:scale-125`} />
                 </div>
                 <div
                     className={` border-2  border-transparent ${activeApp === 1 ? "text-white scale-[1.35] bg-themeMain dark:shadow-white/50 shadow-black/70 border-white" : " hover:scale-105 dark:hover:shadow-white/50 hover:shadow-black/50 dark:bg-light-themeBackground/60 hover:bg-themeMain/50 dark:text-black text-white bg-dark-themeBackground/60"}  min-w-full w-fit p-2 aspect-square grid place-items-center rounded-2xl  cursor-pointer hover:shadow-lg active:scale-95 active:shadow-inner`}
+                    title={"Discover Page"}
                     onClick={()=>setActiveApp(1)}
                 >
                     <FiGrid className={`${activeApp === 1 ? "text-white" : "dark:text-dark-themeBackground"} sm:text-xl text-sm group-hover:scale-125`} />
                 </div>
                 <div
                     className={` border-2  border-transparent ${activeApp === 2 ? "text-white scale-[1.35] bg-themeMain dark:shadow-white/50 shadow-black/70 border-white" : " hover:scale-105 dark:hover:shadow-white/50 hover:shadow-black/50 dark:bg-light-themeBackground/60 hover:bg-themeMain/50 dark:text-black text-white bg-dark-themeBackground/60"}  min-w-full w-fit p-2 aspect-square grid place-items-center rounded-2xl  cursor-pointer hover:shadow-lg active:scale-95 active:shadow-inner`}
+                    title={"Chat Page"}
                     onClick={()=>setActiveApp(2)}
                 >
                     <FiMessageSquare className={`${activeApp === 2 ? "text-white" : "dark:text-dark-themeBackground"} sm:text-xl text-sm group-hover:scale-125`} />
                 </div>
                 <div
                     className={` border-2  border-transparent ${activeApp === 3 ? "text-white scale-[1.35] bg-themeMain dark:shadow-white/50 shadow-black/70 border-white" : " hover:scale-105 dark:hover:shadow-white/50 hover:shadow-black/50 dark:bg-light-themeBackground/60 hover:bg-themeMain/50 dark:text-black text-white bg-dark-themeBackground/60"}  min-w-full w-fit p-2 aspect-square grid place-items-center rounded-2xl  cursor-pointer hover:shadow-lg active:scale-95 active:shadow-inner`}
+                    title={"Code Editor"}
                     onClick={()=>setActiveApp(3)}
                 >
                     <FiTerminal className={`${activeApp === 3 ? "text-white" : "dark:text-dark-themeBackground"} sm:text-xl text-sm group-hover:scale-125`} />
                 </div>
             </section>
-            <div className="w-10 h-10 group grid flex-shrink-0 place-items-center rounded-full mx-auto bg-themeMain text-white cursor-pointer active:scale-90">
+            <div 
+                className="w-10 h-10 group grid flex-shrink-0 place-items-center rounded-full mx-auto bg-themeMain text-white cursor-pointer active:scale-90"
+                title={"Add Community"}
+            >
                 <FaPlus className="group-hover:scale-125 group-active:animate-pulse" />
             </div>
         </main>

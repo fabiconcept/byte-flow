@@ -8,6 +8,18 @@
     transition: all .15s ease-in-out;
 }
 
+@layer utilities {
+    @variants responsive{
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    }
+}
+
 * ::-webkit-scrollbar {
     width: 7px;
 }

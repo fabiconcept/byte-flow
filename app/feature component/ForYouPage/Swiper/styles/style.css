@@ -1,0 +1,11 @@
+
+.swiper {
+  width: 15em;
+  height: 22em;
+}
+
+.swiper-slide {
+  display: grid;
+  place-items: center;
+  color: #fff;
+}

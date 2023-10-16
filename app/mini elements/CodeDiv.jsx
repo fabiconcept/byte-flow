@@ -20,7 +20,7 @@ const Code = ({ contentHtml }) => {
   const detectedLanguage = detectLanguage(contentHtml, options) || "bash";
 
   return (
-    <section className='flex flex-col w-full mt-3'>
+    <section className='flex flex-col w-full'>
       <div className='dark:bg-light-themeBackground/50 bg-dark-themeBackground/50 text-white flex justify-between items-center w-full p-2 rounded-t'>
         <span className='text-xs'>{detectedLanguage}</span>
       </div>

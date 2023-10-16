@@ -7,7 +7,7 @@ import fontawesome from '@/fontawesome config/fontawesome'; // Your fontawesome.
 
 config.autoAddCss = false;
 
-export default function PostReactions() {
+export default function PostReactions({isReply, forComment}) {
     const [reactions, setReactions] = useState({
         liked: false,
         disliked: false,
@@ -31,29 +31,29 @@ export default function PostReactions() {
                 >
                     <FontAwesomeIcon icon="fa-solid fa-thumbs-down" className={`${reactions.disliked ? "text-gray-500 rotate-0" : "group-hover:text-gray-200 -rotate-12 group-active:rotate-0"}`} />
                 </span>
-                <span
+                {!forComment && <span
                     onClick={() => setReactions((prev) => ({ ...prev, favorite: !prev.favorite }))}
                     className={`cursor-pointer px-[0.25rem] group rounded-lg ${reactions.favorite ? "bg-dark-themeBackground/20 dark:bg-light-themeBackground/10 scale-125" : "hover:bg-dark-themeBackground/5 dark:hover:bg-light-themeBackground/10 hover:scale-110"} active:scale-90`}
                 >
                     <FontAwesomeIcon icon="fa-solid fa-star" className={`${reactions.favorite ? "text-yellow-500 rotate-0" : "group-hover:text-yellow-200 -rotate-12 group-active:rotate-0"}`} />
-                </span>
+                </span>}
                 <span
                     onClick={() => setReactions((prev) => ({ ...prev, ban: !prev.ban }))}
                     className={`cursor-pointer px-[0.25rem] group rounded-lg ${reactions.ban ? "bg-dark-themeBackground/20 dark:bg-light-themeBackground/10 scale-125" : "hover:bg-dark-themeBackground/5 dark:hover:bg-light-themeBackground/10 hover:scale-110"} active:scale-90`}
                 >
                     <FontAwesomeIcon icon="fa-solid fa-ban" className={`${reactions.ban ? "text-red-500 rotate-0" : "group-hover:text-red-200 -rotate-12 group-active:rotate-0"}`} />
                 </span>
-                <span
+                {!forComment && <span
                     onClick={() => setReactions((prev) => ({ ...prev, retweeted: !prev.retweeted }))}
                     className={`cursor-pointer px-[0.25rem] group rounded-lg ${reactions.retweeted ? "bg-dark-themeBackground/20 dark:bg-light-themeBackground/10 scale-125" : "hover:bg-dark-themeBackground/5 dark:hover:bg-light-themeBackground/10 hover:scale-110"} active:scale-90`}
                 >
                     <FontAwesomeIcon icon="fa-solid fa-retweet" className={`${reactions.retweeted ? "text-green-500 rotate-0" : "group-hover:text-green-300 -rotate-12 group-active:rotate-0"}`} />
-                </span>
+                </span>}
             </div>
-            <div className="opacity-60 flex gap-1 cursor-pointer hover:opacity-80 text-sm">
+            {!isReply && <div className="opacity-60 flex gap-1 cursor-pointer hover:opacity-80 text-sm">
                 <span className="font-semibold">1</span>
                 <span>reply</span>
-            </div>
+            </div>}
         </section>
     );
 }

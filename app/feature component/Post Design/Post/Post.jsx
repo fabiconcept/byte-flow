@@ -7,7 +7,9 @@ export default function Post({hasComments, isDemo, content}) {
         <div className="w-full flex-col flex dark:text-white border-2 border-transparent focus-within:border-themeMain pb-2 rounded-lg">
             <PostText contentHtml={content} isDemo={isDemo} />
             {hasComments && !isDemo && <MiniComments />}
-            {!isDemo && <AddCommentBox />}
+            <div className={`${!hasComments ? "mt-2" : "" }`}>
+                {!isDemo && <AddCommentBox isFull={!hasComments} />}
+            </div>
         </div>
     );
 }
